@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon interface</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <header>
+    <img src="" alt="" />
+    <h1>Pokedex</h1>
+  </header>
+  <body>
+    <section class="informacion">
+      <!-- <div class="nombre in-flex"> -->
+      <div class="nombre in-flex">
+        <h2>Charizard</h2>
+        <img src="./Imagenes/Charizard.webp" id="principal" alt="" />
+      </div>
+      <section class="estadisticas in-flex" id="stats">
+        <!-- <div ></div> -->
+        <!-- <div id="columna1">
+          <h2>No.</h2>
+          <h3>006</h3>
+          <br />
+          <br />
+          <h2>TYPE</h2>
+          <h3>Fire</h3>
+          <br />
+          <br />
+          <h2>HEIGHT</h2>
+          <h3>1.7m</h3>
+        </div>
+        <div id="columna2">
+          <h2>LEVEL</h2>
+          <h3>100</h3>
+          <br />
+          <br />
+          <h2>HABILITY</h2>
+          <h3>FLAMES</h3>
+          <br />
+          <br />
+          <h2>WEIGHT</h2>
+          <h3>90.5KG</h3>
+        </div> -->
+      </section>
+    </section>
+    <footer>
+      <h2>Others</h2>
+      <div class="imagenes">
+        <img src="./Imagenes/Squirtle.png" alt="" />
+        <img src="./Imagenes/Entei.webp" alt="" />
+        <img src="./Imagenes/Mewtwo.webp" alt="" />
+        <img src="./Imagenes/Mewtwo.webp" alt="" />
+      </div>
+    </footer>
+    <script>
+      var windowWidth = window.innerWidth;
+      console.log(windowWidth);
+      if (windowWidth <= 425) {
+        document.getElementById("stats").innerHTML =
+          "<div id='columna1'><h2>No.</h2><br /><h2>LEVEL</h2><br /><h2>TYPE</h2><br /><h2>HABILITY</h2><br /><h2>HEIGHT</h2><br /><h2>WEIGHT</h2></div><div id='columna2'><h2>006</h2><br /><h2>100</h2><br /><h2>FIRE</h2><br /><h2>FLAMES</h2><br /><h2>1.7M</h2><br /><h2>90.5KG</h2></div>";
+      } else {
+        document.getElementById("stats").innerHTML =
+          "<div id='columna1'><h2>No.</h2><h3>006</h3><br /><br /><h2>TYPE</h2><h3>Fire</h3><br /><br /><h2>HEIGHT</h2><h3>1.7m</h3></div><div id='columna2'><h2>LEVEL</h2><h3>100</h3><br /><br /><h2>HABILITY</h2><h3>FLAMES</h3><br /><br /><h2>WEIGHT</h2><h3>90.5KG</h3></div>";
+      }
+      window.onresize = function () {
+        windowWidth = window.innerWidth;
+        console.log(windowWidth);
+        if (windowWidth <= 425) {
+          document.getElementById("stats").innerHTML =
+            "<div id='columna1'><h2>No.</h2><br /><h2>LEVEL</h2><br /><h2>TYPE</h2><br /><h2>HABILITY</h2><br /><h2>HEIGHT</h2><br /><h2>WEIGHT</h2></div><div id='columna2'><h2>006</h2><br /><h2>100</h2><br /><h2>FIRE</h2><br /><h2>FLAMES</h2><br /><h2>1.7M</h2><br /><h2>90.5KG</h2></div>";
+        } else {
+          document.getElementById("stats").innerHTML =
+            "<div id='columna1'><h2>No.</h2><h3>006</h3><br /><br /><h2>TYPE</h2><h3>Fire</h3><br /><br /><h2>HEIGHT</h2><h3>1.7m</h3></div><div id='columna2'><h2>LEVEL</h2><h3>100</h3><br /><br /><h2>HABILITY</h2><h3>FLAMES</h3><br /><br /><h2>WEIGHT</h2><h3>90.5KG</h3></div>";
+        }
+      };
+    </script>
+  </body>
+</html>

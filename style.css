@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Century Gothic;
+}
+
+header {
+  min-height: 10%;
+  width: 100%;
+}
+
+body {
+  background-color: blanchedalmond;
+  /* width: 100; */
+}
+
+footer {
+  min-height: 9%;
+  max-height: 9%;
+  width: calc(100%-1px);
+  border-top: 1px solid black;
+}
+
+.informacion {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(128, 128, 128, 0.196);
+}
+
+.nombre {
+  /* min-width: 89%; */
+  /* max-height: 450px; */
+  /* height: 35px; */
+  /* margin: 1% 5% 5%; */
+  /* margin: 0 auto; */
+  text-align: center;
+  /* background-color: white; */
+}
+
+.nombre h2 {
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.estadisticas {
+  background-color: white;
+  border: 0.1rem solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagenes img {
+  background-color: gray;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.imagenes img:hover {
+  background-color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.estadisticas h2 {
+  font-size: calc(0.5vh + 1rem);
+}
+
+/* .estadisticas h3 {
+  font-size: calc();
+} */
+
+@media screen and (max-width: 425px) {
+  header {
+    text-align: center;
+  }
+  .nombre {
+    min-width: 80%;
+    z-index: 99999;
+  }
+  #principal {
+    margin-bottom: -18%;
+    width: 100%;
+    z-index: 9999;
+  }
+  .estadisticas {
+    min-width: 80%;
+  }
+  .estadisticas #columna1 {
+    /* display: inline */
+    flex: 2;
+    margin-left: 2%;
+    /* padding: 10px; */
+    /* margin: 10px 10px 0; */
+  }
+  .estadisticas #columna2 {
+    /* display: inline; */
+    flex: 1;
+    /* padding: 25px; */
+    /* margin: 0 7px 5px; */
+  }
+  .imagenes img {
+    width: 35%;
+    margin: 5px;
+  }
+
+  .in-flex {
+    flex: 1;
+    padding: 25px;
+    margin: 0 7px 5px;
+  }
+  .in-flex:first-child {
+    flex: 2;
+    padding: 10px;
+    margin: 10px 10px 0;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .nombre {
+    max-width: 40%;
+  }
+  #principal {
+    width: 100%;
+  }
+  .estadisticas {
+    min-width: 30%;
+  }
+  .imagenes img {
+    width: 12%;
+    margin: 0;
+  }
+  .in-flex {
+    flex: 1;
+    padding: 0;
+    margin: 20px 60px 20px 1px;
+  }
+  .in-flex:first-child {
+    flex: 2;
+    padding: 25px;
+    margin: 20px 5px 20px 60px;
+  }
+}
